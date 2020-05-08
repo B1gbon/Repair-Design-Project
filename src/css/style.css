@@ -322,12 +322,20 @@ template {
   padding: 13px 20px;
   border: none;
   border-radius: 2px;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: 'Futura Demi';
   text-transform: uppercase; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff; }
+  .button--outline {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -357,6 +365,7 @@ template {
   margin-right: 40px; }
 
 .phone {
+  font-family: 'Futura Demi';
   color: #E3B873; }
 
 .contacts__phone {
@@ -364,16 +373,43 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding-top: 82px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__text {
+    max-width: 504px;
+    font-size: 22px;
+    line-height: 30px; }
   .hero__instagram {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 82px;
     height: 100%; }
+  .hero__button {
+    margin-right: 20px; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313;
+    font-size: 12px;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff; }
 
 .instagram {
   display: flex;
@@ -388,7 +424,13 @@ template {
     font-family: 'Futura Demi'; }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
