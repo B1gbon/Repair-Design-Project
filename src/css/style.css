@@ -342,7 +342,8 @@ template {
 
 .logo {
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Futura Demi'; }
 
 .nav__item {
   color: #ffffff;
@@ -356,6 +357,33 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  position: relative;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #ffffff; }
+  .hero__instagram {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 82px;
+    height: 100%; }
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313; }
+  .instagram__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #E3B873;
+    transform: rotate(90deg);
+    font-family: 'Futura Demi'; }
+
+.title {
+  margin: 0; }
+
 body {
-  font-family: 'Futura Book';
+  font-family: 'Futura Book', sans-serif;
   font-size: 14px; }
