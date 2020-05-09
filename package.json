@@ -1,7 +1,7 @@
 {
   "name": "repair-design-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://b1gbon.github.io/Repair-Design-Project/src/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

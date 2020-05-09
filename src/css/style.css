@@ -326,13 +326,22 @@ template {
   line-height: 15px;
   font-family: 'Futura Demi';
   text-transform: uppercase; }
+  .button:hover {
+    cursor: pointer; }
   .button--primary {
     background-color: #E3B873;
-    color: #ffffff; }
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+    transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      border: 1px solid #ffffff;
+      box-shadow: none; }
   .button--outline {
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff; }
+    .button--outline:hover {
+      border: 1px solid #E3B873; }
 
 .container {
   width: 85%;
@@ -356,17 +365,27 @@ template {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-family: 'Futura Demi'; }
+  font-family: 'Futura Demi';
+  transition: color 0.3s; }
+  .logo:hover {
+    color: #ffffff;
+    cursor: pointer; }
 
 .nav__item {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 40px; }
+  margin-right: 40px;
+  transition: color 0.2s; }
+  .nav__item:hover {
+    color: #E3B873; }
 
 .phone {
   font-family: 'Futura Demi';
-  color: #E3B873; }
+  color: #E3B873;
+  transition: color 0.3s; }
+  .phone:hover {
+    color: #ffffff; }
 
 .contacts__phone {
   margin-right: 45px; }
@@ -381,7 +400,14 @@ template {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
+    position: relative;
     max-width: 670px; }
   .hero__text {
     max-width: 504px;
@@ -410,6 +436,14 @@ template {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #E3B873;
+      border-radius: 50%;
+      margin-left: 12px; }
 
 .instagram {
   display: flex;
@@ -417,11 +451,24 @@ template {
   align-items: center;
   background-color: #131313; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg);
-    font-family: 'Futura Demi'; }
+    font-family: 'Futura Demi';
+    line-height: 0.8;
+    transition: color 0.3s; }
+    .instagram__link:hover {
+      color: #ffffff;
+      cursor: pointer; }
+    .instagram__link::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background-color: #E3B873;
+      margin-left: 8px; }
 
 .title {
   margin: 0;
