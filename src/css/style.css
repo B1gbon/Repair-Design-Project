@@ -329,12 +329,13 @@ template {
   .button:hover {
     cursor: pointer; }
   .button--primary {
+    border: 2px solid #E3B873;
     background-color: #E3B873;
     color: #ffffff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      border: 1px solid #ffffff;
+      border: 2px solid #ffffff;
       box-shadow: none; }
   .button--outline {
     border: 1px solid #ffffff;
