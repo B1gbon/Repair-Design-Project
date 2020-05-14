@@ -388,7 +388,7 @@ body {
   justify-content: space-between;
   align-items: center; }
   .menu__logo {
-    margin-right: 82px; }
+    margin-right: 5.857rem; }
 
 .logo {
   color: #E3B873;
@@ -517,11 +517,15 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1300px) {
-  html {
-    font-size: 12px; }
+@media screen and (max-width: 1350px) {
   .nav__item {
     margin-right: 1rem; } }
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 12px; }
+  .menu__logo {
+    margin-right: 2rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
