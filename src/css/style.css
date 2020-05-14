@@ -462,8 +462,8 @@ body {
     align-items: center;
     left: 0;
     bottom: 0;
-    min-width: 247px;
-    min-height: 97px;
+    min-width: 17.642rem;
+    min-height: 6.928rem;
     background-color: #131313;
     font-size: 0.857rem;
     font-family: 'Yeseva One', cursive;
@@ -510,6 +510,7 @@ body {
 .title {
   margin: 0;
   font-family: 'Yeseva One', cursive;
+  font-weight: 400;
   font-size: 2.857rem;
   line-height: 53px;
   text-transform: uppercase; }
@@ -557,6 +558,13 @@ body {
     margin-top: 2.285rem;
     margin-bottom: 1.857rem; } }
 
-@media screen and (max-hieght: 520px) {
+@media screen and (max-height: 600px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 350px) {
+  .menu__logo {
+    font-weight: 500;
+    font-size: 0.857rem;
+    line-height: 1rem;
+    margin-right: 56px; } }
