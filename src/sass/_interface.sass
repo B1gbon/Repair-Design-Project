@@ -24,3 +24,51 @@
     color: $light
     &:hover
       border: 1px solid $primary
+.label
+  font-family: 'Futura Book', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 1.071rem
+  line-height: 1.428rem
+  &--light
+   color: rgba($light, 0.5)
+.input
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+  font-weight: 500
+  font-size: 1.285rem
+  line-height: 1.785rem
+  font-style: normal
+  
+  &::placeholder
+    color: $light
+.policy
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked +
+      .policy__label
+        &::before
+          background: $primary url('../img/check.svg') no-repeat center / 0.8rem
+      
+  &__label
+    display: flex
+    align-items: center
+    font-family: 'Futura Book', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 1.142rem
+    line-height: 1.571rem
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer
+      margin-right: 0.64rem
+      
+      
+
+  
