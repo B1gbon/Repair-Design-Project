@@ -13,7 +13,7 @@ function bs() {
   watch("./**/*.html").on('change', browserSync.reload);
   watch("./src/sass/**/*.sass", serveSass);
   watch("./src/sass/**/*.scss", serveSass);
-  watch("./js/*.js").on('change', browserSync.reload);
+  watch("./src/js/*.js").on('change', browserSync.reload);
 };
 
 function serveSass() {
