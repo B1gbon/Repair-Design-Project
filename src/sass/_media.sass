@@ -12,9 +12,12 @@
       margin-right: 2rem
     
 @media screen and ( max-width:992px )
+  .row
+    flex-direction: column
+    align-items: center
   .nav
     display: none
-
+  
   .hero
     &__instagram
       display: none
@@ -27,9 +30,7 @@
       font-size: 1.8rem
       line-height: 138.6%
       font-weight: 400
-  .row
-    flex-direction: column
-    align-items: center
+  
   .types
     &__card
       margin-bottom: 5.7rem
@@ -99,13 +100,18 @@
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 350px )
-  .menu
-    &__logo
-      font-weight: 500
-      font-size: 0.857rem
-      line-height: 1rem
-      margin-right: 56px
+@media screen and ( max-width: 370px )
+  .card
+    &__image
+      margin-top: 1rem
+      max-width: 23.6rem
+ 
+  // .menu
+  //   &__logo
+  //     font-weight: 500
+  //     font-size: 0.857rem
+  //     line-height: 1rem
+  //     margin-right: 56px
       
 
 
