@@ -459,11 +459,6 @@ img {
       text-transform: none;
       color: #ffffff; }
 
-.design {
-  background-color: #131313; }
-  .design__section-title {
-    color: #ffffff; }
-
 .header {
   position: fixed;
   left: 0;
@@ -749,6 +744,14 @@ img {
     margin-right: 2rem; } }
 
 @media screen and (max-width: 992px) {
+  .types__card {
+    margin-bottom: 5.7rem; }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #ffffff; }
+    .design__card {
+      margin-bottom: 5.2rem; }
   .row {
     flex-direction: column;
     align-items: center; }
