@@ -85,8 +85,8 @@ var mySwiper = new Swiper ('.swiper-container', {
   var bullets = $('.swiper-pagination');
 
 
-  next.css('left', prev.width() + 40 + bullets.width() + 40 )
-  bullets.css('left', prev.width() + 40 )
+  next.css('left', prev.width() + 24 + bullets.width() + 5 )
+  bullets.css('left', prev.width() + 24 )
 
 
 });

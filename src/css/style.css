@@ -713,6 +713,9 @@ img {
   width: auto;
   bottom: -2px; }
 
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 17px; }
+
 .types__section-title {
   margin-bottom: 2.214rem; }
 
@@ -935,7 +938,8 @@ img {
     margin-top: 2rem;
     margin-bottom: 2.2rem; }
   .col-31 {
-    max-width: 28rem; }
+    max-width: 28rem;
+    margin-left: 0; }
   .col-50 {
     max-width: 28.333rem; }
   .contacts__phone {
