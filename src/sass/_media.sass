@@ -3,7 +3,9 @@
   .nav
     &__item
      margin-right: 1rem 
-  
+  .col
+    &-50
+      max-width: 40rem
 @media screen and ( max-width:1150px )
   html
     font-size: 12px
@@ -11,7 +13,11 @@
     &__logo
       margin-right: 2rem
     
-@media screen and ( max-width:992px )
+@media screen and ( max-width:991px )
+  .col
+    &-50
+      max-width: 40rem
+      margin-top: 2.357rem
   .types
     &__card
       margin-bottom: 5.7rem
@@ -82,6 +88,42 @@
 
 
 @media screen and ( max-width:576px )
+  .swiper-slide
+    &__text
+      margin-right: 2.583rem
+      &:last-of-type
+        padding-bottom: 3.2rem
+    &__heading
+      font-size: 1.166rem
+      line-height: 1.583rem
+      margin-bottom: 0.916rem
+    &__value
+      font-size: 1.166rem
+      line-height: 1.583rem
+  .section
+    &--dark
+      padding-top: 36px
+    &-title
+      &__heading
+        &--primary
+         font-size: 1.833rem
+         line-height: 138.6%
+         letter-spacing: -0.07em 
+      &__word
+        &::after
+          display: none     
+      &__text
+        font-size: 1.166rem
+        line-height: 158.48%
+        max-width: 25.416rem
+        margin-top: 2rem
+        margin-bottom: 2.2rem
+  .col
+    &-31
+      max-width: 28rem
+    &-50
+      max-width: 28.333rem
+  
   .contacts
     &__phone
       margin-right: 0
