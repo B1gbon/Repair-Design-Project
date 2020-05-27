@@ -202,7 +202,7 @@ var check_if_load = false;
             // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent',
             // Своё изображение иконки метки.
-            iconImageHref: 'images/ball.png',
+            iconImageHref: './img/map-icon.png',
             // Размеры метки.
             iconImageSize: [48, 48],
             // Смещение левого верхнего угла иконки относительно
@@ -294,7 +294,7 @@ $('.ymap-container').mouseenter(function(){
       spinner.addClass('is-active');
 
   // Загружаем API Яндекс.Карт
-      loadScript("https://api-maps.yandex.ru/2.1?apikey=ddf951ec-566e-4401-aece-b607484eb739&lang=ru_RU", function(){
+      loadScript("https://api-maps.yandex.ru/2.1/?apikey=9e843b97-6254-48a4-a854-e1455d3e66af&lang=ru_RU", function(){
          // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
          ymaps.load(init);
       });                

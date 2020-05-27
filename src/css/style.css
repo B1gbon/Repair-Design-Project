@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
@@ -1116,7 +1115,6 @@ img {
   margin: auto;
   margin-bottom: 4rem; }
 
-/* Индикатор загрузки, который показывается до загрузки карты */
 .loader {
   position: absolute;
   z-index: 15;
