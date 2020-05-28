@@ -92,6 +92,12 @@ var mySwiper = new Swiper ('.swiper-container', {
 new WOW().init();
 
 
+$("body").on('click', '[href*="#"]', function(e){
+  var fixed_offset = 100;
+  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1500);
+  e.preventDefault();
+});
+
 function validateForm(form){
   $(form).validate({
     errorClass: "invalid",
@@ -159,10 +165,28 @@ validateForm('.footer__form');
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"});
 
 
-  // карта Yandex
-  //Переменная для включения/отключения индикатора загрузки
+
+var player;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '465',
+    width: '100%',
+    videoId: 'RHzzLqJWqHs',
+    events: {
+      'onReady': videoPlay,
+    }
+  });
+})
+
+function videoPlay(event) { 
+  event.target.playVideo();
+}
+
+
+
+  // Yandex
 var spinner = $('.ymap-container').children('.loader');
-//Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
+
 var check_if_load = false;
 
   function init() {
@@ -172,7 +196,7 @@ var check_if_load = false;
         }, {
             searchControlProvider: 'yandex#search'
         }),        
-        // Создаём макет содержимого.
+        
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
@@ -181,15 +205,13 @@ var check_if_load = false;
             hintContent: 'Торговый центр; ул. Нансена, 239, Ростов-на-Дону, Россия',
             balloonContent: 'Прямой телефон +7 (999) 768 32 99'
         }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
+            
             iconLayout: 'default#image',
-            // Своё изображение иконки метки.
+            
             iconImageHref: 'img/map-icon.png',
-            // Размеры метки.
+            
             iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
+            
             iconImageOffset: [-5, -38]
         }),
 
@@ -198,36 +220,34 @@ var check_if_load = false;
             balloonContent: 'А эта — новогодняя',
             iconContent: '12'
         }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
+            
             iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
+            
             iconImageHref: './img/map-icon.png',
-            // Размеры метки.
+            
             iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
+            
             iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
+            
             iconContentOffset: [15, 15],
-            // Макет содержимого.
+            
             iconContentLayout: MyIconContentLayout
         });
     myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
-// Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+
 var layer = myMap.layers.get(0).get(0);
  
-// Решение по callback-у для определения полной загрузки карты
+
 waitForTilesLoad(layer).then(function() {
-  // Скрываем индикатор загрузки после полной загрузки карты
+  
   spinner.removeClass('is-active');
 });
 }
 
-// Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
+
 function waitForTilesLoad(layer) {
 return new ymaps.vow.Promise(function (resolve, reject) {
   var tc = getTileContainer(layer), readyAll = true;
@@ -260,7 +280,7 @@ for (var k in layer) {
 return null;
 }
 
-// Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+
 function loadScript(url, callback){
 var script = document.createElement("script");
 
@@ -272,7 +292,7 @@ if (script.readyState){  // IE
       callback();
     }
   };
-} else {  // Другие браузеры
+} else {  
   script.onload = function(){
     callback();
   };
@@ -282,20 +302,19 @@ script.src = url;
 document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-// Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
+
 var ymap = function() {
 $('.ymap-container').mouseenter(function(){
-    if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+    if (!check_if_load) { 
 
-    // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
       check_if_load = true; 
 
-  // Показываем индикатор загрузки до тех пор, пока карта не загрузится
+  
       spinner.addClass('is-active');
 
-  // Загружаем API Яндекс.Карт
+  
       loadScript("https://api-maps.yandex.ru/2.1/?apikey=9e843b97-6254-48a4-a854-e1455d3e66af&lang=ru_RU", function(){
-         // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+         
          ymaps.load(init);
       });                
     }
@@ -305,10 +324,11 @@ $('.ymap-container').mouseenter(function(){
 
 $(function() {
 
-//Запускаем основную функцию
+
 ymap();
 
 })
+
 });
 
 
