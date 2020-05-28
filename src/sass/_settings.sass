@@ -15,9 +15,16 @@ img
 .section
   padding: 60px 0
   &--dark
-    background-color: $dark
+    background: url('../img/bg-lines-light.png') no-repeat center /cover, url('../img/frame.png') no-repeat right /cover
+    background-color: $dark 
     color: $light
     padding-top: 128px
+  &--step
+    background: $dark url('../img/bg-lines-light.png') no-repeat right /cover
+  &--white
+    background: $light url('../img/bg-lines-dark.png') no-repeat right /cover
+  &--customer
+    background: url('../img/bg-lines-dark.png') no-repeat center /cover, url('../img/frame.png') no-repeat right /cover
   &-title
     font-size: 0.969rem
     line-height: 2rem

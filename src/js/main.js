@@ -130,7 +130,9 @@ function validateForm(form){
         required: "Заполните поле",
         minlength: "Некорректно введен номер"
       },
-      userQuestion: "Заполните поле",
+      userQuestion: {
+        required: "Заполните поле"
+      },
       userEmail: {
         required: "Заполните поле",
         email: "Введите Ваш email в формате name@domain.com"

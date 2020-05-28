@@ -407,6 +407,15 @@ template {
   position: fixed;
   z-index: 999; }
 
+div.invalid {
+  bottom: -20px;
+  color: tomato;
+  margin-top: 8px;
+  font-size: 1rem; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
 .header__container {
   width: 90%;
   max-width: 1256px;
@@ -443,9 +452,16 @@ img {
 .section {
   padding: 60px 0; }
   .section--dark {
+    background: url("../img/bg-lines-light.png") no-repeat center/cover, url("../img/frame.png") no-repeat right/cover;
     background-color: #131313;
     color: #ffffff;
     padding-top: 128px; }
+  .section--step {
+    background: #131313 url("../img/bg-lines-light.png") no-repeat right/cover; }
+  .section--white {
+    background: #ffffff url("../img/bg-lines-dark.png") no-repeat right/cover; }
+  .section--customer {
+    background: url("../img/bg-lines-dark.png") no-repeat center/cover, url("../img/frame.png") no-repeat right/cover; }
   .section-title {
     font-size: 0.969rem;
     line-height: 2rem;
@@ -1148,30 +1164,6 @@ img {
   border-left-color: transparent;
   border-radius: 50%; }
 
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0); }
-  to {
-    transform: rotate(359deg); } }
-
-@keyframes rotation {
-  from {
-    transform: rotate(0); }
-  to {
-    transform: rotate(359deg); } }
-
-@-webkit-keyframes blink {
-  from {
-    opacity: .5; }
-  to {
-    opacity: 1; } }
-
-@keyframes blink {
-  from {
-    opacity: .5; }
-  to {
-    opacity: 1; } }
-
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1220,10 +1212,13 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.7rem;
     color: #ffffff; }
-    .modal__input:last-of-type {
-      margin-bottom: 0.1rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem; }
+      .modal__input-group::last-of-type {
+        margin-bottom: 0.1rem; }
   .modal__policy {
     margin-bottom: 2.714rem; }
   .modal__button {
