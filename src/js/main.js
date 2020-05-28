@@ -138,27 +138,27 @@ function validateForm(form){
         email: "Введите Ваш email в формате name@domain.com"
       }
     },
-    submitHandler: function (form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function(){
-         $(form)[0].reset();
-          // $(form).find('input').val("");
-          // modalAnswer.toggleClass('modal-answer_visible');
-          // modal.removeClass('modal_visible');
-          // $('.modal-answer__title').text('Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.');
-          // $(form).text('Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.');
-          $(form).html('<p class="modal-answer__text">Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут. <br><br>Чтобы узнавать новости первыми, подпишитесь на нашу группу в ВК <br><a class="modal-answer__link" href="https://vk.com/frontend_katrina" target="_blank">Подписаться <img src="./img/vk-icon.svg" alt="vk"></a></p>');
-        },
-        error: function(jqXHR, textStatus) {
-          console.error(jqXHR + " " + textStatus);
-        }
+//     submitHandler: function (form) {
+//       $.ajax({
+//         type: "POST",
+//         url: "send.php",
+//         data: $(form).serialize(),
+//         success: function(){
+//          $(form)[0].reset();
+//           // $(form).find('input').val("");
+//           // modalAnswer.toggleClass('modal-answer_visible');
+//           // modal.removeClass('modal_visible');
+//           // $('.modal-answer__title').text('Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.');
+//           // $(form).text('Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.');
+//           $(form).html('<p class="modal-answer__text">Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут. <br><br>Чтобы узнавать новости первыми, подпишитесь на нашу группу в ВК <br><a class="modal-answer__link" href="https://vk.com/glo_academy" target="_blank">Подписаться <img src="./img/vk-icon.svg" alt="vk"></a></p>');
+//         },
+//         error: function(jqXHR, textStatus) {
+//           console.error(jqXHR + " " + textStatus);
+//         }
       });
     }
   });
-}
+// }
 validateForm('.modal__form');
 validateForm('.control__form');
 validateForm('.footer__form');
@@ -331,6 +331,6 @@ ymap();
 
 })
 
-});
+// });
 
 

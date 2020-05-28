@@ -411,7 +411,8 @@ div.invalid {
   bottom: -20px;
   color: tomato;
   margin-top: 8px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  position: absolute; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -1216,9 +1217,8 @@ img {
     .modal__input-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2.5rem; }
-      .modal__input-group::last-of-type {
-        margin-bottom: 0.1rem; }
+      margin-bottom: 2.5rem;
+      position: relative; }
   .modal__policy {
     margin-bottom: 2.714rem; }
   .modal__button {
